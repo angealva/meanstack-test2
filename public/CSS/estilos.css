@@ -1,0 +1,56 @@
+.tag1{
+
+	text-align: right;
+	color: grey;
+}
+
+div.contenedor 
+{
+    width:100%;
+    color: white;
+    background-color: black;
+ 
+    height: 105px;
+    text-align: right;
+}
+body{
+
+	background-color: #E5E7E9;
+}
+
+/* Ocultar botón radio */
+input[id^="spoiler"]{
+display: none;
+}
+/* Estilo botón clicable */
+input[id^="spoiler"] + label {
+display: block;
+width: 500px;
+margin: 0 auto;
+padding: 5px 20px;
+background: white;
+cursor: pointer;
+border:1px solid grey;
+color: grey;
+}
+/* Estilo botón cuando su INPUT está seleccionado */
+input[id^="spoiler"]:checked + label {
+color: grey;
+background: white;
+}
+/* Estilo caja SPOILER (inicialmente oculto) */
+input[id^="spoiler"] ~ .spoiler {
+width: 90%;
+height: 0;
+overflow: hidden;
+opacity: 0;
+margin: 10px auto 0; 
+}
+/* Estilo caja SPOILER cuando su INPUT está seleccionado */
+input[id^="spoiler"]:checked + label + .spoiler{
+height: auto;
+opacity: 1;
+width: 40%;
+border:1px solid grey;
+background: white;
+}
