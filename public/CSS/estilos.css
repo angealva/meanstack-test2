@@ -12,10 +12,14 @@
 }
 
 .tag12{
-	margin-left: 71%;
-	text-align: right;
-	color: grey;
+
+ float: right;
+ text-align: right;
+ color: grey;
+ margin-right: 5px;
 }
+
+
 .formPrincipal{
 
 	margin-left:35%;
