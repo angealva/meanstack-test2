@@ -21,49 +21,34 @@
 
     <div class="contenedor">
     <br>
-        <h1>This is the MEAN Stack Test</h1>
+        <h1 class="margenHeader">MEAN Stack Test</h1>
   </div>
 
-  <div ng-controller="validacionControler" ng-init="Listar()">
+  <div ng-controller="validacionControler" ng-init="Listar()" class="margenUsuario">
   <p class="tag1"> {{user.fname}}&nbsp; {{user.lname}}&nbsp; ({{user.login}})&nbsp;&nbsp;<a ng-href="{{logout}}" ng-click="logout()" class="tag1">logout</a></p>
 
   <br>
 
-  <div>
+  <div style="width: 100%;">
 
     <table>
       <tbody>
 
          <tr ng-repeat="cursos in Courses">
-            <td>   
-              <div ng-click="accion()"  id="{{cursos._id}}"><strong>{{cursos.code}}</strong>&nbsp;&nbsp;&nbsp;{{cursos.name}}</div>
-              <div id="{{cursos._id}}" ng-show="accion()" >{{cursos.description}}</div>
+            <td>  
+
+              <div class="estilo" ng-click="accion(cursos._id)"><strong>&nbsp;&nbsp;&nbsp;&nbsp;{{cursos.code}}</strong>&nbsp;&nbsp;&nbsp;{{cursos.name}}<a class="tag12">details</a></div>
+
+              <div style="display: none;" class="estilo1" id="{{cursos._id}}">{{cursos.description}}<br><a class="tag11"  href="{{cursos.launch}}" target="_blank">launch</a></div>
+
+              <br>
+
             </td>
           </tr>
 
       </tbody>
     </table>
 </div>
-
-<!-- 
-<div>
-
-    <table>
-      <tbody>
-
-         <tr ng-repeat="cursos in Courses">
-            <td>
-              <input type="checkbox" id="spoiler1"></input>
-              <label for="spoiler1"><strong>{{cursos.code}}</strong>&nbsp;&nbsp;&nbsp;{{cursos.name}}</label>
-              <div class="spoiler" >{{cursos.description}}</div>
-            </td>
-          </tr>
-
-      </tbody>
-    </table>
-</div>
-
--->
 
 
 

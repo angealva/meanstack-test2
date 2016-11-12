@@ -35,16 +35,15 @@ router.get("/logout",function(req,res){
 
 
 //__________________________LOS CURSOS_________________________________________
-	    
-	    router.get('/Courses', function (req, res){
-
-	    	courses.find(function(err, docs){
-	    		console.log(docs);
-	    		res.json(docs);
-	    	});
-	    });
 
 
+router.get('/Courses/:username', function(req, res){
+
+	var username = req.params.username;
+	courses.find({users: username}, function(err, doc){
+		res.json(doc);
+	});
+});
 
 module.exports = router;
 

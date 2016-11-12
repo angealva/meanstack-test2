@@ -1,0 +1,73 @@
+/*
+ VERY IMPORTANT!!! 
+ - always use .screen-container before each style definitions 
+   in order to encapsulate styles and prevent inappropriate behaviors
+*/
+
+.screen-container {float:left; width: 100%;margin-top:30px;}
+
+.screen-container #title {float: left;width:100%;font-weight: bold;display: none;margin: 5px 5px;font-size: 18px;}
+
+.screen-container #a1 {float:left; width: 100%;display: none;text-align: justify-all;}
+
+.screen-container #cuadro {float:left; width: 50%; height: 200px; background-color: #ED35AD;}
+
+.screen-container #a2 {float:left; width: 40%;display: none; height: 200px; margin-left: 30px;text-align: justify-all;}
+
+
+.screen-container button.message { margin-left: 550px; color: white; width: 15%; padding: .5em 2em .55em; -webkit-border-radius: 2em;
+ -moz-border-radius: 2em;
+ border-radius: 2em; background-color: #4F93DA;border-top: white;margin-top: 1%;text-align: justify-all;  }
+
+.screen-container button.message1 { width: 15%; color: white; padding: .5em 2em .55em; -webkit-border-radius: 2em;
+ -moz-border-radius: 2em;
+ border-radius: 2em; background-color: #4F93DA;border-top: white;margin-top: 1%; text-align: justify-all;}
+
+
+
+
+
+.screen-container button.message:hover{
+
+
+ border-bottom: white;
+
+
+}
+
+.screen-container button.message1:hover{
+
+
+border-bottom: white;
+
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {right: 200px;}
+}
+
+.mymove {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+}
+
+@keyframes slideOutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+}
+
+

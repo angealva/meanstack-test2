@@ -3,7 +3,64 @@
 	text-align: right;
 	color: grey;
 }
+.tag11{
 
+	text-align: right;
+	color: grey;
+	margin-left: 93%;
+
+}
+
+.tag12{
+	margin-left: 71%;
+	text-align: right;
+	color: grey;
+}
+.formPrincipal{
+
+	margin-left:35%;
+	margin-top: 10%;
+	background-color: white;
+	width: 35%;
+	color: grey;
+	padding: 2%;
+	border:1px solid #A1A4A6;
+}
+
+.estilo{
+
+	background-color: white;
+	width: 795px;
+	margin-left:20px;
+	margin-right:20px;
+    border:1px solid grey;
+    color: grey;
+    padding: 1%;
+
+}
+.estilo1{
+
+	background-color: white;
+	width: 68.5%;
+	position: static;
+    border:1px solid grey;
+    color: grey;
+    margin-left:7%;
+ 	text-align : justify;
+ 	padding: 1%;
+}
+.margenUsuario{
+
+	margin-right:50px;
+	margin-top: 2%; 
+}
+.margenHeader{
+
+	margin-right:50px; 
+}
+table{
+	margin-left: 18%;
+}
 div.contenedor 
 {
     width:100%;
@@ -18,39 +75,33 @@ body{
 	background-color: #E5E7E9;
 }
 
-/* Ocultar botón radio */
-input[id^="spoiler"]{
-display: none;
+#btnLogin{
+ margin-top: 10px;
+ 
+ margin-left: 263px;
+ width: 130px;
+ height: 33px;
+ background: transparent;
+ border-style: groove;
+ color:#A1A4A6;
+ font-size: 15px;
+ border-color: #E5E7E9;
 }
-/* Estilo botón clicable */
-input[id^="spoiler"] + label {
-display: block;
-width: 500px;
-margin: 0 auto;
-padding: 5px 20px;
-background: white;
-cursor: pointer;
-border:1px solid grey;
-color: grey;
+
+label{
+ color:#A1A4A6;
+ font-size: 15px;
+ margin-right: 2%;
+
 }
-/* Estilo botón cuando su INPUT está seleccionado */
-input[id^="spoiler"]:checked + label {
-color: grey;
-background: white;
+
+#idencabezado{
+	font-weight: normal;
 }
-/* Estilo caja SPOILER (inicialmente oculto) */
-input[id^="spoiler"] ~ .spoiler {
-width: 90%;
-height: 0;
-overflow: hidden;
-opacity: 0;
-margin: 10px auto 0; 
-}
-/* Estilo caja SPOILER cuando su INPUT está seleccionado */
-input[id^="spoiler"]:checked + label + .spoiler{
-height: auto;
-opacity: 1;
-width: 40%;
-border:1px solid grey;
-background: white;
+
+#inLogin{
+
+width: 75%;
+border:1px solid #A1A4A6;
+
 }

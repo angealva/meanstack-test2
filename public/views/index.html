@@ -14,16 +14,21 @@
 
 <div class="contenedor">
 <br>
-        <h2>This is the MEAN Stack Test</h2>
+        <h2 class="margenHeader">MEAN Stack Test</h2>
   </div>
 
 
-        <form action="login" method="POST"  style="margin-left:40%;margin-top: 10%;background-color: white;">
-            <label id="idencabezado">username</label><br>
-            <input id="inLogin" type="text" name="username"><br>
-            <label id="idencabezado">password</label><br>
-            <input id="inLogin"  type="password" name="password"><br>
-            <button id="btnLogin" type="submit" style="margin-left:190px; ">Login</button>
+    <form action="login" method="POST" class="formPrincipal">
+    <br>
+            <label id="idencabezado">username</label>
+            <input id="inLogin" type="text" name="username">
+            <br>
+             <br>
+            <label id="idencabezado">password</label>
+            <input id="inLogin"  type="password" name="password">
+            <br>
+          
+            <button id="btnLogin" type="submit">login</button>
         </form>
 
            <script src="controllers/controller.js"></script> 

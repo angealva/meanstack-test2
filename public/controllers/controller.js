@@ -4,12 +4,12 @@ validacion.controller('validacionControler', ['$scope', '$http', function($scope
  var refresh = function() {
   $http.get('/app/user').success(function(response) {
    $scope.user = response;
+
   });
  };
 
  refresh();
 
- 
 
  $scope.logout = function() {
   $scope.logout = "/";
@@ -19,15 +19,34 @@ validacion.controller('validacionControler', ['$scope', '$http', function($scope
  }
 
 
+
  $scope.Listar = function(){
 
-     $http.get('/app/Courses').success(function(response){
-        $scope.Courses = response;   
+    $http.get('/app/user').success(function(response) {
+     $scope.user = response;
+var username =  response.login;
+      $http.get('/app/Courses/' +username).success(function(response){
+      $scope.Courses = response; 
+
      });
+
+    });
+ 
+
    };
 
 
-  $scope.accion=function(){
+
+   var Ocultaraccion=function(){
+
+    for (var i = $scope.Courses.length - 1; i >= 0; i--) {
+      $('#'+$scope.Courses[i]._id).attr('style','display:none');
+    }
+
+  };
+  $scope.accion=function(id){
+    Ocultaraccion();
+    $('#'+id).removeAttr("style");
 
   };
 
